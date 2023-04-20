@@ -18,15 +18,15 @@ public func XCTAssertEqual<K, T>(_ dict1: [K: T],
         XCTFail("dictionary sizes don't match")
         return
     }
-    
+
     let keys1 = dict1.keys
     let keys2 = dict2.keys
-    
+
     guard keys1 == keys2 else {
         XCTFail("dictionary keys don't match")
         return
     }
-    
+
     keys1.forEach {
         let value1 = dict1[$0]!
         let value2 = dict2[$0]!
@@ -42,8 +42,8 @@ public func XCTAssertEqual<T>(_ array1: [T],
         XCTFail("array sizes don't matc")
         return
     }
-    
-    (0..<array1.count).forEach {
+
+    (0 ..< array1.count).forEach {
         let value1 = array1[$0]
         let value2 = array2[$0]
         XCTAssertEqual(value1, value2, accuracy: accuracy)
@@ -62,7 +62,7 @@ public func XCTAssertEqual<K, T>(_ dict1: [K: [T]],
 
     let keys1 = dict1.keys
     let keys2 = dict2.keys
-    
+
     guard keys1 == keys2 else {
         XCTFail("dictionary keys don't match")
         return

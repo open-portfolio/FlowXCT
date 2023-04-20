@@ -14,7 +14,8 @@ let package = Package(
     products: [
         .library(
             name: "FlowXCT",
-            targets: ["FlowXCT"]),
+            targets: ["FlowXCT"]
+        ),
     ],
     dependencies: [
     ],
